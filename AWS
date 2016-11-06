@@ -1,0 +1,31 @@
+AWS Experments:
+
+
+1.
+When i send amazon_userid in conditonals, i get the following error reply:
+
+{
+  "__type": "com.amazon.coral.service#AccessDeniedException",
+  "Message": "User: arn:aws:sts::049428796662:assumed-role/Achintest/BackplaneAssumeRoleSession is not authorized to perform: dynamodb:Scan on resource: arn:aws:dynamodb:us-east-1:049428796662:table/User"
+}
+Response Headers
+{"Content-Type":"application/json"}
+Logs
+Execution log for request test-request
+Sun Nov 06 03:03:04 UTC 2016 : Starting execution for request: test-invoke-request
+Sun Nov 06 03:03:04 UTC 2016 : HTTP Method: GET, Resource Path: /subscriben
+Sun Nov 06 03:03:04 UTC 2016 : Method request path: {}
+Sun Nov 06 03:03:04 UTC 2016 : Method request query string: {}
+Sun Nov 06 03:03:04 UTC 2016 : Method request headers: {}
+Sun Nov 06 03:03:04 UTC 2016 : Method request body before transformations: null
+Sun Nov 06 03:03:04 UTC 2016 : Endpoint request URI: https://dynamodb.us-east-1.amazonaws.com/?Action=Scan
+Sun Nov 06 03:03:04 UTC 2016 : Endpoint request headers: {Authorization=****************************************************************************************************************************************************************************************************************************************************************************************28ca49, X-Amz-Date=20161106T030304Z, x-amzn-apigateway-api-id=m284bprx1d, Accept=application/json, User-Agent=AmazonAPIGateway_m284bprx1d, X-Amz-Security-Token=AgoGb3JpZ2luEP///////////wEaCXVzLWVhc3QtMSKAAhFmI9mCQm4IOncAgkEJpOgr67u8i7qXxX7q0h0iaDhUSgD5n4nTEFVXsPUe1k8FQk6V8qKPY+/uW9Nb5CBxK5KDQNveFyhz8umFG/gkvmurvPT5FRanmLPbvclo8AJwfcTQeHnv0i3BQ29NoB/57HSwNxnND4i0lN+GWvle7l4IGoxYbhiV96MT1qhj/1ueVusknBICsy29hwg6DarEgtU9hNjZI9XBkBqvqghnX9dJwClsnEkReLxJadMbUo1vswZT48emHH7m06ZcugsOoOAQNWhIrGALJxI2IR/9nxwXOac1mxc5JqTIqYrabNbf7cuJCx3rhObPh8GmwJv61JsqiQII5P//////////ARAAGgwwNDk0Mjg3OTY2NjIiDNYBo2BZM9RkZT+AhSrdAYzY3gXbg43QEkcEkloJTNMvLxrGaUAt7Ni7cl+dese4BISB16h2Syie0iU38XdLjaxNSi7NCaMYcgCekVikd91S5B1Cf0F [TRUNCATED]
+Sun Nov 06 03:03:04 UTC 2016 : Endpoint request body after transformations: {
+    "TableName": "User"
+}
+Sun Nov 06 03:03:04 UTC 2016 : Endpoint response body before transformations: {"__type":"com.amazon.coral.service#AccessDeniedException","Message":"User: arn:aws:sts::049428796662:assumed-role/Achintest/BackplaneAssumeRoleSession is not authorized to perform: dynamodb:Scan on resource: arn:aws:dynamodb:us-east-1:049428796662:table/User"}
+Sun Nov 06 03:03:04 UTC 2016 : Endpoint response headers: {x-amzn-RequestId=8GVG9BUPLOE865OL4TQSGJP4MRVV4KQNSO5AEMVJF66Q9ASUAAJG, x-amz-crc32=3918239917, Content-Length=261, Date=Sun, 06 Nov 2016 03:03:04 GMT, Content-Type=application/x-amz-json-1.0}
+Sun Nov 06 03:03:04 UTC 2016 : Method response body after transformations: {"__type":"com.amazon.coral.service#AccessDeniedException","Message":"User: arn:aws:sts::049428796662:assumed-role/Achintest/BackplaneAssumeRoleSession is not authorized to perform: dynamodb:Scan on resource: arn:aws:dynamodb:us-east-1:049428796662:table/User"}
+Sun Nov 06 03:03:04 UTC 2016 : Method response headers: {Content-Type=application/json}
+Sun Nov 06 03:03:04 UTC 2016 : Successfully completed execution
+Sun Nov 06 03:03:04 UTC 2016 : Method completed with status: 200
